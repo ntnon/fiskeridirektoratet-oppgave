@@ -16,7 +16,7 @@ docker-compose up -d --build
 ```
 
 The application will be available at:
-- **Frontend**: http://localhost
+- **Frontend**: http://localhost:3000
 - **Backend API**: http://localhost:8080
 
 ## Docker Commands
@@ -76,7 +76,7 @@ The application consists of:
   - REST API endpoints at `/api/fish`
   
 - **Frontend**: React application served by Nginx
-  - Runs on port 80
+  - Accessible on port 3000 (container runs on port 80)
   - Proxies API requests to backend via Nginx
 
 ## Development
@@ -101,7 +101,7 @@ The frontend development server includes a proxy configuration to forward API re
 ## Troubleshooting
 
 ### Port conflicts
-If ports 80 or 8080 are already in use, modify the port mappings in `docker-compose.yml`:
+If ports 3000 or 8080 are already in use, modify the port mappings in `docker-compose.yml`:
 
 ```yaml
 services:
@@ -110,7 +110,7 @@ services:
       - "8081:8080"  # Change 8081 to your preferred port
   frontend:
     ports:
-      - "3000:80"    # Change 3000 to your preferred port
+      - "3001:80"    # Change 3001 to your preferred port
 ```
 
 ### Container startup issues
