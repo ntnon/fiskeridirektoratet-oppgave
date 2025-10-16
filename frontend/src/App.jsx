@@ -1,12 +1,12 @@
 import "./App.css";
 
-import FishPage from "./components/FishPage";
+import FishList from "./components/FishList";
 
 function App() {
   return (
-    <>
-      <FishPage />
-    </>
+    <div className="min-h-screen bg-gray-50">
+      <FishList />
+    </div>
   );
 }
 
