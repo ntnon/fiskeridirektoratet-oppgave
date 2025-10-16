@@ -67,6 +67,7 @@ The application is split into two main layers:
   - **Build Tool**: Maven
   - **Testing**: JUnit, Mockito
 
+
 ## Frontend
 - **Framework & Language**: React, JavaScript
 - **Server**: Served via Nginx
@@ -77,10 +78,20 @@ The application is split into two main layers:
   - Implements features like sorting, editing, and confirmation modals
   - **API Proxying**: Nginx proxies frontend API calls to the backend at `/api/fish`
 - **Development**:
-  - **Build Tool**: npm
+  - **Build Tool**: npm, vite
   - **Styling**: Tailwindcss
 
 
+## Design decisions
+- **JpaRepository**: Ready made, easy to use, built for CRUD operations.
+- **H2 Database**: Chosen for simplicity and zero configuration for local development.
+- **React with Tailwind**: Chosen for familiarity.
+- **Docker & Docker Compose**: Ensure consistent environment and easy deployment.
+- **No Authentication/Security**: Focus is on functionality and CRUD operations per assignment scope.
+- **Directories**: Descriptive folders with clear separation of concerns.
+- **Testing**: Backend unit tests of model, controller, service, and repository layers.
+- **Nginx**: Avoids CORS issues.
+- **WebConfig.java**: Backend configuration class that enables CORS, allowing the React development server to make API requests to the Spring Boot backend.
 
 ## Development
 
